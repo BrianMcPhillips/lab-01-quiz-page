@@ -1,19 +1,39 @@
 // import functions and grab DOM elements
-import {isCorrect} from './functions.js';
+//import {isCorrect} from './functions.js';
 
 const theButton = document.getElementById('quiz-button');
 const result = document.getElementById('results');
 // initialize state
-theButton.onclick = () =>
-    let numberCorrect = 0;
-    alert('welcome to my microphone quiz!');
-    const userName = prompt('What is your name? ');
-    const quizConfirm = confirm(`Do you really want to take my quiz ${userName}?`);
-    console.log(quizConfirm);
-
-    if (quizConfirm) {
-        const userAnswer1 = prompt
-    }
-}
-
 // set event listeners to update state and DOM
+theButton.addEventListener('click', () => {
+    const userName = prompt('What is your name?');
+    const answer1 = prompt('Is a Microphone a transducer?');
+    // answer1 should return yes
+    const answer2 = prompt('Is the word Mic short for Microphone?');
+    //answer2 should return yes
+    const answer3 = prompt('Are microphones a new technology?');
+    //answer 3 should return no
+
+    let score = 0;
+
+    //if the first answer is yes, add one to the score
+    if (answer1 === 'yes') {
+        score++;
+        // score = score +1
+    }
+    //if the second answer is yes, add two to the score
+    if (answer2 === 'yes') {
+        score++;
+        // score = score +1
+    }
+    //if the third answer is no, add three to the score
+    if (answer3 === 'no') {
+        score++;
+        // score = score +1
+    }
+    console.log(score);
+    
+
+});
+  
+
