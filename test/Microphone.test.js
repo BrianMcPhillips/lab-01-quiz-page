@@ -1,15 +1,15 @@
 // IMPORT MODULES under test here:
-// import example from '../example.js';
+// import example from '../app.js';
 
 const test = QUnit.test;
 
 test('it should return true if passed anything that starts with a Y', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const word1 = 'YES';
+    const word1 = 'yes';
     const word2 = 'YEAH';
     const word3 = 'YEPPERS';
-    const word4 = 'YEEEE';
+    const word4 = 'YESSS';
     const expected = true;
 
     const expected = true;
