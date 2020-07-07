@@ -88,6 +88,11 @@ ol {
     width: 50%;
 }
 
+ul {
+    font-family: sans-serif;
+    
+}
+
 .gutter-right {
     margin-right: 20px;
 }
