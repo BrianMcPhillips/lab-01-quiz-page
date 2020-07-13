@@ -1,8 +1,10 @@
 // import functions and grab DOM elements
-import { countsAsYes } from './functions.js';
+import { countsAsYes, findPercentage } from './functions.js';
 
 const theButton = document.getElementById('quiz-button');
 const resultSpan = document.getElementById('results');
+const updatePercent = document.getElementById('results-percent');
+
 // initialize state
 // set event listeners to update state and DOM
 theButton.addEventListener('click', () => {
@@ -36,8 +38,20 @@ theButton.addEventListener('click', () => {
         // score = score +1
     }
    
+    const percentage = findPercentage(score, 3);
 
-    resultSpan.textContent = userName + ' your score is: ' + score;
+    if (percentage === 100) {
+        updatePercent.style.color = 'green';
+    }
+    if (percentage === 66) {
+        updatePercent.style.color = 'yellow';
+    }
+    if (percentage <= 33) {
+        updatePercent.style.color = 'red';
+    }
+
+    resultSpan.textContent = `${userName} your score is: ${score} - `;
+    updatePercent.textContent = ` ${percentage}%`;
     //takes score and places it in result span on bottom of page
     
 

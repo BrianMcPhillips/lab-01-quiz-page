@@ -1,18 +1,18 @@
 // IMPORT MODULES under test here:
-// import example from '../app.js';
+import { countsAsYes } from '../functions.js';
 
 const test = QUnit.test;
 
 test('it should return true if passed anything that starts with a Y', (expect) => {
     //Arrange
+    
     // Set up your arguments and expectations
     const word1 = 'yes';
     const word2 = 'YEAH';
     const word3 = 'YEPPERS';
     const word4 = 'YESSS';
     const expected = true;
-
-    const expected = true;
+    
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -28,3 +28,4 @@ test('it should return true if passed anything that starts with a Y', (expect) =
     expect.equal(actual3, expected);
     expect.equal(actual4, expected);
 });
+

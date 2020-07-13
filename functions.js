@@ -3,3 +3,7 @@ export function countsAsYes(word) {
     const isAY = firstLetter === 'y'; 
     return isAY;
 }
+
+export function findPercentage(score, available) {
+    return Math.floor((score / available) * 100);
+} 
